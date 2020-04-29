@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html ng-app="Route">
+<head>
+    <title></title>
+    <base href="/"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>    
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/route.js"></script>
+    <script src="Login/Login.js"></script>
+    <script src="Registration/Registration.js"></script>
+    <script src="Todo/Todo.js"></script>
+    <script src="Profile/Profile.js"></script>
+    <script src="AccessDenied/AccessDenied.js"></script>
+    <meta charset="utf-8" />
+    <script>
+        var app = angular.module("Route").controller("new", function($scope, $location)
+        {
+            $location.path('/Register');
+        })
+    </script>
+</head>
+<body ng-cloak ng-controller="new">
+    <ng-view></ng-view>
+</body>
+</html>

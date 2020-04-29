@@ -1,0 +1,39 @@
+﻿
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <div id="error" class="inner-div">{{error}}</div>
+    <div class="wrapper">
+        <form ng-submit="fetchData()" name='registration' class="myForm">
+            <div class="formInstructionsDiv formElement">
+                <h2 class="formTitle">Sign Up</h2>
+                <p class="instructionsText">Please fill in this form to create an account</p>
+            </div>
+            <div class="fillContentDiv formElement">
+                <div class="names formContentElement">
+                    <input ng-model="Data.firstName" class="inputRequest " id="firstName" type="text" placeholder="First Name" />
+                    <input ng-model="Data.lastName" class="inputRequest " id="lastName" type="text" placeholder="Last Name" />
+                </div>
+                <label>
+                    <input ng-model="Data.email" class="inputRequest formContentElement" id="email" type="text" placeholder="Email">
+                </label>
+                <label>
+                    <input ng-model="Data.password" class="inputRequest formContentElement" type="password" id="password" placeholder="Enter password">
+                </label>
+                <label>
+                    <input ng-model="Data.cpassword" class="inputRequest formContentElement" type="password" id="cPassword" placeholder="Confirm password">
+                </label>
+                <label>
+                    <input ng-model="Data.address" class="inputRequest formContentElement" type="text" id="address" placeholder="Enter Address">
+                </label>
+                <label>
+                    <input ng-model="Data.gender" class="inputRequest formContentElement" type="text" id="gender" placeholder="Enter Male/Female">
+                </label>
+            </div>
+            <div class="submitButtonDiv formElement">
+                <input class="submitButton" type="submit" name="submit" value="Submit" />
+                <input class="submitButton" id="login" type="button" value="SignIn"
+                       ng-click="clicked()" />
+            </div>
+        </form>
+    </div>
+</body>

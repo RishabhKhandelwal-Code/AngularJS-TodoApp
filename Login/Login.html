@@ -1,0 +1,21 @@
+﻿
+<body>
+    <br />
+    <div id="error" class="inner-div">{{error}}</div>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <h2 class="active"> Sign In </h2>
+            <h2 class="inactive underlineHover" ng-click="clicked()">Sign Up </h2>
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <img ng-src="/Login/userIcon.png" id="icon" alt="User Icon" />
+            </div>
+            <!-- Login Form -->
+            <form name="login" ng-submit="check()">
+                <input type="email" ng-model="Data.email" id="login" class="fadeIn second" name="userId" placeholder="Email">
+                <input type="password" ng-model="Data.password" id="password" class="fadeIn third" name="pswrd" placeholder="Password">
+                <input type="submit" class="fadeIn fourth" value="Log In">
+            </form>
+        </div>
+    </div>
+</body>
