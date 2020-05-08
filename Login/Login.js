@@ -4,7 +4,7 @@ Login.js, authorizes a valid user to access the other application features
 like Todo list, Profile and SignOut*/
 
 //Login Controller
-angular.module("Route").controller('loginCtrl', function ($scope, $location) {
+angular.module("TodoApp").controller('loginCtrl', function ($scope, $location) {
     //Checks if the user is authenticated then it avoids redirecting him/her to Login Page
     (function () {
         if (sessionStorage.getItem('AuthenticationState') === "Authenticated") {
@@ -40,9 +40,9 @@ angular.module("Route").controller('loginCtrl', function ($scope, $location) {
             }
         }
 
-        //assigning localStorage values to variables
-        var userName = userListDeserialized[0].email;
-        var password = userListDeserialized[0].password;
+        //assigning localStorage values to variables //ankita
+        var userName = userListDeserialized.email;
+        var password = userListDeserialized.password;
 
         //Logic for authorizing the user
         if (validateUserName(formUserName) && validateFormPassword(formUserPassword)) {

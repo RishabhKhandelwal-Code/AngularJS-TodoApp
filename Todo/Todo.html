@@ -3,80 +3,43 @@
     <h1>Todo list</h1>
     <button class="todo" id="todo" ng-click="goToProfile()">Edit Profile</button>
     <button class="logout" id="logout" ng-click="logOut()">LogOut</button>
+    <input class="create" type="button" ng-click="create()" value="Add Item" />
+    <br /><br />
+    <div class="search">
+        <input type="text" placeholder="search in table" ng-model="searchText" />
+    </div>
+    <br />
     <table>
-        <tr>
-            <td>
-                <form ng-submit="createList()">
-                    <div>
-                        <label>Date</label>
-                        <input type="date" ng-model="date" required /><br />
-                    </div>
-                    <div>
-                        <br />
-                        <label>Title</label>
-                        <input type="text" ng-model="title" required /><br />
-                    </div>
-                    <div>
-                        <br />
-                        <label>Comment</label><br />
-                        <textarea rows="4" cols="50" ng-model="comment"></textarea><br />
-                    </div>
-                    <div>
-                        <br />
-                        <label>Category</label>
-                        <select id="categories" ng-model="categories" required>
-                            <option value="" selected disabled hidden>Choose here</option>
-                            <option value="Personal">Personal</option>
-                            <option value="Office">Official</option>
-                            <option value="Both">Both</option>
-                        </select><br />
-                    </div>
-                    <div>
-                        <br />
-                        <button type="submit" ng-if="!editMode">Save</button>
-                    </div>
-                    <div>
-                        <button type="submit" ng-if="editMode" ng-click="createList(editIndex)">Push</button>
-                    </div>
-                </form>
-            </td>
-            <td>
-                Search : <input type="text" placeholder="search in table" ng-model="searchText" />
-                <br /><br />
-                <table>
-                    <thead>
-                        <tr>
-                            <th ng-click="sortData('date')">
-                                Date<div ng-class="getSortClass('date')"></div>
-                            </th>
-                            <th ng-click="sortData('title')">
-                                Title<div ng-class="getSortClass('title')"></div>
-                            </th>
-                            <th ng-click="sortData('comment')">
-                                Comment<div ng-class="getSortClass('comment')"></div>
-                            </th>
-                            <th ng-click="sortData('categories')">
-                                Categories <div ng-class="getSortClass('categories')"></div>
-                            </th>
-                            <th>
-                                Action
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="data in formData | filter:searchText | orderBy:sortColumn:reverseSort">
-                            <td>{{data.date | date:"dd/MM/yyyy"}}</td>
-                            <td>{{data.title}}</td>
-                            <td>{{data.comment}}</td>
-                            <td>{{data.categories}}</td>
-                            <td>
-                                <input type="button" value="Edit" ng-click="editData($index)" />
-                                <input type="button" value="Delete" ng-click="deleteData($index)" />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
+        <thead>
+            <tr>
+                <th ng-click="sortData('date')">
+                    Date<div ng-class="getSortClass('date')"></div>
+                </th>
+                <th ng-click="sortData('title')">
+                    Title<div ng-class="getSortClass('title')"></div>
+                </th>
+                <th ng-click="sortData('comment')">
+                    Comment<div ng-class="getSortClass('comment')"></div>
+                </th>
+                <th ng-click="sortData('categories')">
+                    Categories <div ng-class="getSortClass('categories')"></div>
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="data in formData | filter:searchText | orderBy:sortColumn:reverseSort">
+                <td>{{data.date | date:"dd/MM/yyyy"}}</td>
+                <td>{{data.title}}</td>
+                <td>{{data.comment}}</td>
+                <td>{{data.categories}}</td>
+                <td>
+                    <input type="button" value="Edit" ng-click="editData($index)" />
+                    <input type="button" value="Delete" ng-click="deleteData($index)" />
+                </td>
+            </tr>
+        </tbody>
     </table>
 </body>

@@ -1,0 +1,43 @@
+﻿
+<body ng-cloak>
+    <h1>Edit Todo</h1>
+    <table>
+        <tr>
+            <td>
+                <form class="container" ng-submit="createList()">
+                    <div>
+                        <label>Date</label>
+                        <input type="date" ng-model="date" required /><br />
+                    </div>
+                    <div>
+                        <br />
+                        <label>Title</label>
+                        <input type="text" ng-model="title" required /><br />
+                    </div>
+                    <div>
+                        <br />
+                        <label>Comment</label><br />
+                        <textarea rows="4" cols="50" ng-model="comment"></textarea><br />
+                    </div>
+                    <div>
+                        <label>Category</label>
+                        <select id="categories" ng-model="categories" required>
+                            <option value="" selected disabled hidden>Choose here</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Office">Official</option>
+                            <option value="Both">Both</option>
+                        </select><br />
+                    </div>
+                    <div>
+                        <br />
+                        <br />
+                        <label> Previously selected category : {{selectedCategory}}</label>
+                    </div>
+                    <div>
+                        <br />
+                        <button type="submit" ng-click="createList()">Update</button>
+                    </div>
+                </form>
+            </td>
+    </table>
+</body>

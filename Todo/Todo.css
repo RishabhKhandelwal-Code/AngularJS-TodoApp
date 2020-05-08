@@ -27,22 +27,22 @@ th {
 
 /*This class displays the UP arrow*/
 .arrow-up {
-     width: 0;
-     height: 0;
-     border-left: 5px solid transparent;
-     border-right: 5px solid transparent;
-     border-bottom: 10px solid black;
-     display:inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid black;
+    display: inline-block;
 }
 
 /*This class displays the DOWN arrow*/
 .arrow-down {
-     width: 0;
-     height: 0;
-     border-left: 5px solid transparent;
-     border-right: 5px solid transparent;
-     border-top: 10px solid black;
-     display:inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid black;
+    display: inline-block;
 }
 
 table {
@@ -114,4 +114,13 @@ label.validation-error {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.create {
+    position: fixed;
+}
+
+.search {
+    width: fit-content;
+    height: fit-content;
 }

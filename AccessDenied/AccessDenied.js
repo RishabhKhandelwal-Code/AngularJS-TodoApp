@@ -1,2 +1,2 @@
-﻿angular.module("Route").controller('accessDeniedCtrl', function () {
+﻿angular.module("TodoApp").controller('accessDeniedCtrl', function () {
 });

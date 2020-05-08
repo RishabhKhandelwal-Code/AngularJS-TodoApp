@@ -1,8 +1,7 @@
 ﻿/// <reference path="angular.min.js" />
 
-angular.module("Route", ["ngRoute"])
+angular.module("TodoApp", ["ngRoute"])
 .config(function ($routeProvider, $locationProvider) {
-    $locationProvider.hashPrefix('');
     $routeProvider
         .when("/Register", {
             templateUrl: "Registration/Registration.html",
@@ -24,6 +23,16 @@ angular.module("Route", ["ngRoute"])
             controller: "todoCtrl",
             css: "Todo/Todo.css"
         })
+        .when("/TodoCreate", {
+            templateUrl: "Todo/TodoCreate.html",
+            controller: "todoCreate",
+            css: "Todo/TodoCreate.css"
+        })
+        .when("/TodoEdit", {
+            templateUrl: "Todo/TodoEdit.html",
+            controller: "todoEdit",
+            css: "Todo/TodoCreate.css"
+        })
         .when("/AccessDenied", {
             templateUrl: "AccessDenied/AccessDenied.html",
             controller: "accessDeniedCtrl",
@@ -31,9 +40,9 @@ angular.module("Route", ["ngRoute"])
         })
         .otherwise(
         {
-            redirectTo: "/login"
+            redirectTo: "/Login"
         })
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(false);
 })
 .directive('head', ['$rootScope', '$compile',
     function ($rootScope, $compile) {

@@ -2,7 +2,7 @@
 It validates and adds the user information to localStorage */
 
 //Registration Controller
-angular.module("Route").controller('registrationCtrl', function ($scope, $location) {
+angular.module("TodoApp").controller('registrationCtrl', function ($scope, $location) {
     //Checks if the user is authenticated then it avoids redirecting him/her to Registration Page
     (function () {
         if (sessionStorage.getItem('AuthenticationState') === "Authenticated") {
@@ -29,23 +29,23 @@ angular.module("Route").controller('registrationCtrl', function ($scope, $locati
         //validation
         if (validateFirstName(firstName) && validateLastName(lastName) && validateEmail(email) && validatePassword(tPassword) &&
             validatecPassword(cPassword, tPassword) && validateAddress(address) && validateGender(gender)) {
-            //Array to store all the user inputs
-            var userList = [];
+            //To store all the user inputs
+            var userList = {};
 
-            //Add data to userList array
-            userList.push({
+            //Add data to userList
+            userList = {
                 firstName: firstName,
                 lastName: lastName,
                 email: email,
                 password: cPassword,
                 address: address,
-                gender: gender
-            });
+                gender: gender,
+                todolist: []
+            };
 
             //storing data to local storage
             var userListSerialized = JSON.stringify(userList);
             localStorage.setItem("userData", userListSerialized);
-            //alert("Registered Successfully");
             $location.path('/Login');
         }
         //validate firstName

@@ -128,7 +128,13 @@
     <Content Include="Todo\Todo.html" />
     <Content Include="Todo\Todo.jpg" />
     <Content Include="Todo\Todo.js" />
-    <Content Include="Web.config" />
+    <Content Include="Todo\TodoCreate.html" />
+    <Content Include="Todo\TodoCreate.js" />
+    <Content Include="Todo\TodoEdit.html" />
+    <Content Include="Todo\TodoEdit.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

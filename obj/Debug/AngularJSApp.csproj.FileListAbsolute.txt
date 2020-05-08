@@ -31,3 +31,5 @@ C:\Users\rk23846\Documents\Visual Studio 2015\Projects\AngularJSApp\AngularJSApp
 C:\Users\rk23846\Documents\Visual Studio 2015\Projects\AngularJSApp\AngularJSApp\obj\Debug\AngularJSApp.dll
 C:\Users\rk23846\Documents\Visual Studio 2015\Projects\AngularJSApp\AngularJSApp\obj\Debug\AngularJSApp.pdb
 C:\Users\rk23846\Documents\Visual Studio 2015\Projects\AngularJSApp\AngularJSApp\obj\Debug\AngularJSApp.csprojResolveAssemblyReference.cache
+C:\Users\AN24140\Downloads\Rishabh\AngularJSApp\obj\Debug\AngularJSApp.dll
+C:\Users\AN24140\Downloads\Rishabh\AngularJSApp\obj\Debug\AngularJSApp.pdb
